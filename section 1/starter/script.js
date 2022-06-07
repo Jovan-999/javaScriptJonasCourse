@@ -1,5 +1,11 @@
+////////////////////////////////////
+// Linking a JavaScript File
+
 // let js = 'amazing';
 // console.log(40 + 8 + 23 - 10);
+
+////////////////////////////////////
+// Values and Variables
 
 // console.log('Jonas');
 // console.log(23);
@@ -9,6 +15,8 @@
 // console.log(firstName);
 // console.log(firstName);
 // console.log(firstName);
+
+// Variable name conventions
 
 // let jonas_matilda = 'JM';
 // let $function = 27;
@@ -20,6 +28,9 @@
 // let myCurrentJob = 'Teacher';
 
 // console.log(myFirstJob);
+
+////////////////////////////////////
+// Data Types
 
 // let country = 'Serbia';
 // let continent = 'Europe';
@@ -48,6 +59,9 @@
 
 // console.log(typeof null);
 
+////////////////////////////////////
+// let, const and var
+
 // let age = 30;
 // age = 31;
 
@@ -61,7 +75,10 @@
 // lastName = 'Schmedtmann';
 // console.log(lastName);
 
-// // Math operators
+////////////////////////////////////
+// Basic Operators
+// Math operators
+
 // const now = 2037;
 // const ageJonas = now - 1991;
 // const ageSarah = now - 2018;
@@ -91,6 +108,9 @@
 
 // console.log(now - 1991 > now - 2018);
 
+////////////////////////////////////
+// Operator Precedence
+
 // const now = 2037;
 // const ageJonas = now - 1991;
 // const ageSarah = now - 2018;
@@ -104,7 +124,18 @@
 // const avarageAge = (ageJonas + ageSarah) / 2;
 // console.log(ageJonas, ageSarah, avarageAge);
 
-// // CODE CHALLANGE #1
+////////////////////////////////////
+// Coding Challenge #1
+
+/*
+Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula: BMI = mass / height ** 2 = mass / (height * height). (mass in kg and height in meter).
+1. Store Mark's and John's mass and height in variables
+2. Calculate both their BMIs using the formula (you can even implement both versions)
+3. Create a boolean variable 'markHigherBMI' containing information about whether Mark has a higher BMI than John.
+TEST DATA 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
+TEST DATA 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76 m tall.
+GOOD LUCK 😀
+*/
 
 // const massMark = 78;
 // const heightMark = 1.69;
@@ -144,6 +175,9 @@
 // multiple
 // lines`);
 
+////////////////////////////////////
+// Taking Decisions: if / else Statements
+
 // if() {
 
 // } else {
@@ -168,7 +202,16 @@
 // }
 // console.log(century);
 
-// CODING CHALLANGE #2
+////////////////////////////////////
+// Coding Challenge #2
+
+/*
+Use the BMI example from Challenge #1, and the code you already wrote, and improve it:
+1. Print a nice output to the console, saying who has the higher BMI. The message can be either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
+2. Use a template literal to include the BMI values in the outputs. Example: "Mark's BMI (28.3) is higher than John's (23.9)!"
+HINT: Use an if/else statement 😉
+GOOD LUCK 😀
+*/
 
 // const massMark = 78;
 // const heightMark = 1.69;
@@ -189,3 +232,74 @@
 // } else {
 //   console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})`);
 // }
+
+////////////////////////////////////
+// Type Conversion and Coercion
+
+// type conversion
+// const inputYear = '1991';
+// console.log(Number(inputYear), inputYear);
+// console.log(inputYear + 18);
+
+// console.log(Number('Jonas'));
+// console.log(typeof NaN);
+
+// console.log(String(23), 23);
+
+// // type coercion
+// console.log('I am ' + 23 + ' years old');
+// console.log('23' - '10' - 3);
+// console.log('23' / '2');
+
+// let n = '1' + 1; // '11'
+// n = n - 1;
+// console.log(n);
+
+////////////////////////////////////
+// Truthy and Falsy Values
+
+// 5 falsy values: 0, '', undefined, null, NaN
+
+// console.log(Boolean(0));
+// console.log(Boolean(undefined));
+// console.log(Boolean('Jonas'));
+// console.log(Boolean({}));
+// console.log(Boolean(''));
+// const money = 100;
+// if (money) {
+//   console.log("Don't spend it all ;)");
+// } else {
+//   console.log('You should get a job!');
+// }
+// let height = 0;
+// if (height) {
+//   console.log('YAY! Height is defined');
+// } else {
+//   console.log('Height is UNDEFINED');
+// }
+
+////////////////////////////////////
+// Equality Operators: == vs. ===
+
+// const age = '18';
+// if (age === 18) console.log('You just became an adult (strict)');
+
+// if (age == 18) console.log('You just became an adult (loose)');
+
+// const favourite = Number(prompt("What's your favourite number?"));
+// console.log(favourite);
+// console.log(typeof favourite);
+// if (favourite === 23) {
+//   // 22 === 23 -> FALSE
+//   console.log('Cool! 23 is an amzaing number!');
+// } else if (favourite === 7) {
+//   console.log('7 is also a cool number');
+// } else if (favourite === 9) {
+//   console.log('9 is also a cool number');
+// } else {
+//   console.log('Number is not 23 or 7 or 9');
+// }
+// if (favourite !== 23) console.log('Why not 23?');
+
+////////////////////////////////////
+// Logical Operators
