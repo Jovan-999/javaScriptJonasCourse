@@ -63,7 +63,7 @@ const flights =
 
 // console.log(flights.split('+'));
 
-const getCode = str => str.slice(0, 3).toUpperCase();
+const getCode = string => string.slice(0, 3).toUpperCase();
 
 for (const flight of flights.split('+')) {
   // console.log(flight.split(';'));
