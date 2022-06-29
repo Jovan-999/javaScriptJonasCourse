@@ -66,3 +66,33 @@
 
 ///////////////////////////////////////
 // Functions Accepting Callback Functions
+
+// const oneWord = function (string) {
+//   return string.replace(/ /g, '').toLowerCase();
+// };
+
+// const upperFirstWord = function (string) {
+//   const [first, ...others] = string.split(' ');
+//   return [first.toUpperCase(), ...others].join(' ');
+// };
+
+// // Higher-order function
+// const transformer = function (string, fnctn) {
+//   console.log(`Original string: ${string}`);
+//   console.log(`Transformed string ${fnctn(string)}`);
+
+//   console.log(`Transformed by: ${fnctn.name}`);
+// };
+
+// transformer('JavaScript is the best!', upperFirstWord);
+// transformer('JavaScript is the best!', oneWord);
+
+// // JS uses callbacks all the time
+// const high5 = function () {
+//   console.log('Hi');
+// };
+// document.body.addEventListener('click', high5);
+// ['Jonas', 'Martha', 'Adam'].forEach(high5);
+
+///////////////////////////////////////
+// Functions Returning Functions
