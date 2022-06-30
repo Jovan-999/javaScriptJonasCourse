@@ -276,3 +276,54 @@ GOOD LUCK 😀
 // poll.displayResults.call({ answers: [5, 2, 3] }, 'string');
 // poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] }, 'string');
 // poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] });
+
+///////////////////////////////////////
+// Immediately Invoked Function Expressions (IIFE)
+// Functions that executes once and disappears right after it's called once
+
+// const runOnce = function () {
+//   console.log('This will never run again');
+// };
+// runOnce();
+
+// // IIFE
+// (function () {
+//   console.log('This will never run again');
+//   const isPrivate = 23;
+// })();
+
+// // console.log(isPrivate)
+
+// (() => console.log('This will ALSO never run again'))();
+
+// {
+//   const isPrivate = 23;
+//   var notPrivate = 46; // var ignore block scope
+// }
+
+// // console.log(isPrivate);
+// console.log(notPrivate);
+
+///////////////////////////////////////
+// Closures
+
+// const secureBooking = function () {
+//   let passengerCount = 0;
+
+//   return function () {
+//     passengerCount++;
+//     console.log(`${passengerCount} passengers`);
+//   };
+// };
+
+// const booker = secureBooking();
+
+// booker(); // 1 passenger
+// booker(); // 2 passengers
+// booker(); // 3 passengers
+
+// console.dir(booker);
+
+///////////////////////////////////////
+// More Closure Examples
+// Example 1
