@@ -65,13 +65,7 @@ const inputClosePin = document.querySelector('.form__input--pin');
 /////////////////////////////////////////////////
 // LECTURES
 
-const currencies = new Map([
-  ['USD', 'United States dollar'],
-  ['EUR', 'Euro'],
-  ['GBP', 'Pound sterling'],
-]);
-
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 // Simple Array Methods
@@ -124,3 +118,60 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 ///////////////////////////////////////
 // Looping Arrays: forEach
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// for (const [i, movement] of movements.entries()) {
+//   if (movement > 0) {
+//     console.log(`Movement ${i + 1}: You deposited ${movement}`);
+//   } else {
+//     console.log(`Movement ${i + 1}: You withdrew ${Math.abs(movement)}`);
+//   }
+// }
+
+// console.log('---- FOREACH ----');
+
+// movements.forEach(function (movement, index, array) {
+//   if (movement > 0) {
+//     console.log(`Movement ${index + 1}: You deposited ${movement}`);
+//   } else {
+//     console.log(`Movement ${index + 1}: You withdrew ${Math.abs(movement)}`);
+//   }
+// });
+
+// 0: function(200)
+// 1: function(450)
+// 2: function(400)
+// ...
+// when I said that we use a callback function
+// to tell another higher order function
+// exactly what it should do,
+// and so in this case we tell forEach
+// that in each iteration
+// it should log one of these two strings here to the console
+// So we give the forEach method instructions
+// by giving it a callback function
+// which contains these instructions, alright.
+
+///////////////////////////////////////
+// forEach With Maps and Sets
+// Map
+
+// const currencies = new Map([
+//   ['USD', 'United States dollar'],
+//   ['EUR', 'Euro'],
+//   ['GBP', 'Pound sterling'],
+//   // USD = KEY, US DOLLAR = VALUE
+// ]);
+
+// currencies.forEach(function (value, key, map) {
+//   console.log(`${key}: ${value}`);
+// });
+
+// // Set
+// const currenciesUnique = new Set(['USD', 'GBP', 'USD', 'EUR', 'EUR']);
+// console.log(currenciesUnique);
+// // sets doesn't have indexes and keys
+// currenciesUnique.forEach(function (value, _, map) {
+//   // _ variable that are unnecessary.
+//   console.log(`${value}: ${value}`);
+// });
