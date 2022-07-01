@@ -75,7 +75,7 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 // Simple Array Methods
-let arr = ['a', 'b', 'c', 'd', 'e'];
+// let arr = ['a', 'b', 'c', 'd', 'e'];
 
 // SLICE
 // console.log(arr);
@@ -90,24 +90,37 @@ let arr = ['a', 'b', 'c', 'd', 'e'];
 // SPLICE
 // SPLICE MUTATE ORIGINAL ARRAY
 // console.log(arr.splice(2));
-arr.splice(-1); // removes last element E is deleted
-console.log(arr);
-arr.splice(1, 2); // b and c are deleted
-console.log(arr);
+// arr.splice(-1); // removes last element E is deleted
+// console.log(arr);
+// arr.splice(1, 2); // b and c are deleted
+// console.log(arr);
 
-// REVERSE
-arr = ['a', 'b', 'c', 'd', 'e'];
-const arr2 = ['j', 'i', 'h', 'g', 'f'];
-console.log(arr2.reverse()); // does mutate the array
-console.log(arr2);
+// // REVERSE
+// arr = ['a', 'b', 'c', 'd', 'e'];
+// const arr2 = ['j', 'i', 'h', 'g', 'f'];
+// console.log(arr2.reverse()); // does mutate the array
+// console.log(arr2);
 
-// CONCAT
-const letters = arr.concat(arr2);
-console.log(letters);
-console.log([...arr, ...arr2]);
+// // CONCAT
+// const letters = arr.concat(arr2);
+// console.log(letters);
+// console.log([...arr, ...arr2]);
 
-// JOIN
-console.log(letters.join(' - '));
+// // JOIN
+// console.log(letters.join(' - '));
 
 ///////////////////////////////////////
-// The new at Method
+// The new at Method // ES 2022
+// const arr = [23, 11, 64];
+// console.log(arr[0]);
+// console.log(arr.at(0));
+
+// // getting last array element
+// console.log(arr[arr.length - 1]);
+// console.log(arr.slice(-1)[0]);
+// console.log(arr.at(-1));
+// console.log('jonas'.at(0));
+// console.log('jonas'.at(-1));
+
+///////////////////////////////////////
+// Looping Arrays: forEach
