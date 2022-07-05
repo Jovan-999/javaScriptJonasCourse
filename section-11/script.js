@@ -125,3 +125,48 @@ document.addEventListener('keydown', function (e) {
 
 // // Don't use
 // logo.clasName = 'jonas';
+
+///////////////////////////////////////
+// Button scrolling
+btnScrollTo.addEventListener('click', function (e) {
+  const s1coords = section1.getBoundingClientRect();
+  console.log(s1coords);
+
+  console.log(e.target.getBoundingClientRect());
+
+  console.log('Current scroll (X/Y)', window.pageXOffset, window.pageYOffset);
+
+  console.log(
+    'height/width viewport',
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth
+  );
+
+  // Scrolling
+  // window.scrollTo(
+  //   s1coords.left + window.pageXOffset,
+  //   s1coords.top + window.pageYOffset
+  // );
+
+  // window.scrollTo({
+  //   left: s1coords.left + window.pageXOffset,
+  //   top: s1coords.top + window.pageYOffset,
+  //   behavior: 'smooth',
+  // });
+
+  section1.scrollIntoView({ behavior: 'smooth' });
+});
+
+///////////////////////////////////////
+// Types of Events and Event Handlers
+const h1 = document.querySelector('h1');
+
+const alertH1 = function (event) {
+  alert('addEventListener: Great! You are reading the heading :D');
+};
+h1.addEventListener('mouseenter', alertH1);
+setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
+
+// h1.onmouseenter = function (event) {
+//   alert('onmouseenter: Great! You are reading the heading :D');
+// };
