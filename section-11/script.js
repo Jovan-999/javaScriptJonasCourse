@@ -296,32 +296,6 @@ const slider = function () {
 slider();
 
 ///////////////////////////////////////
-// Sticky navigation
-// const initialCoords = section1.getBoundingClientRect();
-// console.log(initialCoords);
-
-// window.addEventListener('scroll', function () {
-//   console.log(window.scrollY);
-
-//   if (window.scrollY > initialCoords.top) nav.classList.add('sticky');
-//   else nav.classList.remove('sticky');
-// });
-
-///////////////////////////////////////
-// Sticky navigation: Intersection Observer API
-// const obsCallback = function (entries, observer) {
-//   entries.forEach(entry => {
-//     console.log(entry);
-//   });
-// };
-// const obsOptions = {
-//   root: null,
-//   threshold: [0, 0.2],
-// };
-// const observer = new IntersectionObserver(obsCallback, obsOptions);
-// observer.observe(section1);
-
-///////////////////////////////////////
 ///////////////////////////////////////
 ///////////////////////////////////////
 
@@ -486,4 +460,46 @@ slider();
 // console.log(h1.parentElement.children);
 // [...h1.parentElement.children].forEach(function (el) {
 //   if (el !== h1) el.style.transform = 'scale(0.5)';
+// });
+
+///////////////////////////////////////
+// Sticky navigation
+// const initialCoords = section1.getBoundingClientRect();
+// console.log(initialCoords);
+
+// window.addEventListener('scroll', function () {
+//   console.log(window.scrollY);
+
+//   if (window.scrollY > initialCoords.top) nav.classList.add('sticky');
+//   else nav.classList.remove('sticky');
+// });
+
+///////////////////////////////////////
+// Sticky navigation: Intersection Observer API
+// const obsCallback = function (entries, observer) {
+//   entries.forEach(entry => {
+//     console.log(entry);
+//   });
+// };
+// const obsOptions = {
+//   root: null,
+//   threshold: [0, 0.2],
+// };
+// const observer = new IntersectionObserver(obsCallback, obsOptions);
+// observer.observe(section1);
+
+///////////////////////////////////////
+// Lifecycle DOM Events
+
+// document.addEventListener('DOMContentLoaded', function (event) {
+//   console.log('HTML parsed and DOM tree built!', event);
+// });
+
+// window.addEventListener('load', function (event) {
+//   console.log('Page fully loaded', event);
+// });
+// window.addEventListener('beforeunload', function (event) {
+//   event.preventDefault();
+//   console.log(event);
+//   event.returnValue = '';
 // });
