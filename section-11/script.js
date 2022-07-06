@@ -116,6 +116,27 @@ tabsContainer.addEventListener('click', function (event) {
     .querySelector(`.operations__content--${clicked.dataset.tab}`)
     .classList.add('operations__content--active');
 });
+
+///////////////////////////////////////
+// Menu fade animation
+const handleHover = function (event) {
+  // console.log(this);
+  if (event.target.classList.contains('nav__link')) {
+    const link = event.target;
+    const siblings = link.closest('.nav').querySelectorAll('.nav__link');
+    const logo = link.closest('.nav').querySelector('img');
+
+    siblings.forEach(element => {
+      if (element !== link) element.style.opacity = this;
+    });
+    logo.style.opacity = this;
+  }
+};
+
+// Passing "argument" into handler
+nav.addEventListener('mouseover', handleHover.bind(0.5));
+nav.addEventListener('mouseout', handleHover.bind(1));
+
 ///////////////////////////////////////
 ///////////////////////////////////////
 ///////////////////////////////////////
