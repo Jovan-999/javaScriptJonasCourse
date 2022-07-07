@@ -126,63 +126,82 @@ GOOD LUCK 😀
 // const PersonCl = class {}
 
 // Class declaration
-class PersonCl {
-  constructor(fullName, birthYear) {
-    this.fullName = fullName;
-    this.birthYear = birthYear;
-  }
+// class PersonCl {
+//   constructor(fullName, birthYear) {
+//     this.fullName = fullName;
+//     this.birthYear = birthYear;
+//   }
 
-  // Instance methods
-  // Methods will be added to .prototype property
-  calcAge() {
-    console.log(2037 - this.birthYear);
-  }
+//   // Instance methods
+//   // Methods will be added to .prototype property
+//   calcAge() {
+//     console.log(2037 - this.birthYear);
+//   }
 
-  greet() {
-    console.log(`Hey ${this.fullName}`);
-  }
+//   greet() {
+//     console.log(`Hey ${this.fullName}`);
+//   }
 
-  get age() {
-    return 2037 - this.birthYear;
-  }
+//   get age() {
+//     return 2037 - this.birthYear;
+//   }
 
-  // Set a property that already exists
-  set fullName(name) {
-    if (name.includes(' ')) this._fullName = name;
-    else alert(`${name} is not a full name!`);
-  }
+//   // Set a property that already exists
+//   set fullName(name) {
+//     if (name.includes(' ')) this._fullName = name;
+//     // _ convention avoid conflict
+//     else alert(`${name} is not a full name!`);
+//   }
 
-  get fullName() {
-    return this._fullName;
-  }
+//   get fullName() {
+//     return this._fullName;
+//   }
 
-  // Static method
-  static hey() {
-    console.log('Hey there 👋');
-    console.log(this);
-  }
-}
+//   // Static method
+//   static hey() {
+//     console.log('Hey there 👋');
+//     console.log(this);
+//   }
+// }
 
-const jessica = new PersonCl('Jessica Davis', 1996);
+// const jessica = new PersonCl('Jessica Davis', 1996);
 
-console.log(jessica);
-jessica.calcAge();
-console.log(jessica.age);
-console.log(jessica.__proto__ === PersonCl.prototype);
+// console.log(jessica);
+// jessica.calcAge();
+// console.log(jessica.age);
+// console.log(jessica.__proto__ === PersonCl.prototype);
 
-// PersonCl.prototype.greet = function () {
-//   console.log(`Hey ${this.firstName}`);
+// // PersonCl.prototype.greet = function () {
+// //   console.log(`Hey ${this.firstName}`);
+// // };
+
+// jessica.greet();
+
+// // 1. Classes are NOT hoisted // we cant use them before its declared
+// // 2. Classes are first-class citizens // we can pass them into functions
+// // 3. Classes are executed in strict mode
+
+// const walter = new PersonCl('Walter White', 1965);
+
+// // PersonCl.hey();
+
+// ///////////////////////////////////////
+// // Setters and Getters
+// const account = {
+//   owner: 'Jonas',
+//   movements: [200, 530, 120, 300],
+
+//   get latest() {
+//     return this.movements.slice(-1).pop();
+//     // last position
+//   },
+
+//   set latest(mov) {
+//     this.movements.push(mov);
+//     // add new movement
+//   },
 // };
 
-jessica.greet();
-
-// 1. Classes are NOT hoisted // we cant use them before its declared
-// 2. Classes are first-class citizens // we can pass them into functions
-// 3. Classes are executed in strict mode
-
-const walter = new PersonCl('Walter White', 1965);
-
-// PersonCl.hey();
-
-///////////////////////////////////////
-// Setters and Getters
+// console.log(account.latest);
+// account.latest = 50;
+// console.log(account.movements);
