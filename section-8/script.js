@@ -175,9 +175,9 @@
 
 // bookEW(23, 'Steven Williams');
 
-// const bookEW32 = book.bind(eurowings, 23);
-// bookEW32('Jonas Schmedtmann');
-// bookEW32('Martha Cooper');
+// const bookEW23 = book.bind(eurowings, 23);
+// bookEW23('Jonas Schmedtmann');
+// bookEW23('Martha Cooper');
 
 // // With Event Listeners
 // lufthansa.planes = 300;

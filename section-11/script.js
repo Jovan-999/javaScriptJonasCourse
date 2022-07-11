@@ -389,7 +389,7 @@ slider();
 // // Don't use
 // logo.clasName = 'jonas';
 
-///////////////////////////////////////
+// /////////////////////////////////////
 // Types of Events and Event Handlers
 // const h1 = document.querySelector('h1');
 
@@ -403,7 +403,7 @@ slider();
 //   alert('onmouseenter: Great! You are reading the heading :D');
 // };
 
-///////////////////////////////////////
+// /////////////////////////////////////
 // Event Propagation in Practice
 
 // const randomInt = (min, max) =>
@@ -431,8 +431,8 @@ slider();
 //   console.log('NAV', e.target, e.currentTarget);
 // });
 
-///////////////////////////////////////
-// DOM Traversing
+// /////////////////////////////////////
+// // DOM Traversing
 // const h1 = document.querySelector('h1');
 
 // // Going downwards: child elements
@@ -462,8 +462,8 @@ slider();
 //   if (el !== h1) el.style.transform = 'scale(0.5)';
 // });
 
-///////////////////////////////////////
-// Sticky navigation
+// /////////////////////////////////////
+// // Sticky navigation
 // const initialCoords = section1.getBoundingClientRect();
 // console.log(initialCoords);
 
@@ -474,8 +474,8 @@ slider();
 //   else nav.classList.remove('sticky');
 // });
 
-///////////////////////////////////////
-// Sticky navigation: Intersection Observer API
+// /////////////////////////////////////
+// // Sticky navigation: Intersection Observer API
 // const obsCallback = function (entries, observer) {
 //   entries.forEach(entry => {
 //     console.log(entry);
@@ -488,8 +488,8 @@ slider();
 // const observer = new IntersectionObserver(obsCallback, obsOptions);
 // observer.observe(section1);
 
-///////////////////////////////////////
-// Lifecycle DOM Events
+// /////////////////////////////////////
+// // Lifecycle DOM Events
 
 // document.addEventListener('DOMContentLoaded', function (event) {
 //   console.log('HTML parsed and DOM tree built!', event);
