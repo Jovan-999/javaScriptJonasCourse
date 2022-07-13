@@ -16,12 +16,12 @@
 // import add, { addToCart, totalPrice as price, tq } from './shoppingCart.js';
 // console.log(price)
 
-import add, { cart } from './shoppingCart.js';
-add('pizza', 2);
-add('bread', 5);
-add('apples', 4);
+// import add, { cart } from './shoppingCart.js';
+// add('pizza', 2);
+// add('bread', 5);
+// add('apples', 4);
 
-console.log(cart);
+// console.log(cart);
 
 ///////////////////////////////////////
 // Top-Level Await (ES2022)
@@ -46,3 +46,38 @@ console.log(cart);
 
 ///////////////////////////////////////
 // The Module Pattern
+
+// const ShoppingCart2 = (function () {
+//   const cart = [];
+//   const shippingCost = 10;
+//   const totalPrice = 237;
+//   const totalQuantity = 23;
+
+//   const addToCart = function (product, quantity) {
+//     cart.push({ product, quantity });
+//     console.log(
+//       `${quantity} ${product} added to cart (shipping cost is ${shippingCost})`
+//     );
+//   };
+
+//   const orderStock = function (product, quantity) {
+//     console.log(`${quantity} ${product} ordered from supplier`);
+//   };
+
+//   return {
+//     addToCart,
+//     cart,
+//     totalPrice,
+//     totalQuantity,
+//   };
+//   // this all works bcs of closures addToCart = birthplace const addToCart
+//   // closures always have connection to birthplace
+// })();
+
+// ShoppingCart2.addToCart('apple', 4);
+// ShoppingCart2.addToCart('pizza', 2);
+// console.log(ShoppingCart2);
+// // console.log(ShoppingCart2.shippingCost); // we cant access it bcs is private
+
+///////////////////////////////////////
+// CommonJS Modules
