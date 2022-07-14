@@ -112,6 +112,14 @@ class RecipeView {
     `;
   }
 
+  addHandlerRender(handler) {
+    ['hashchange', 'load'].forEach(event =>
+      window.addEventListener(event, handler)
+    ); // this is exactly like 2 lines down
+    // window.addEventListener('hashchange', controlRecipe);
+    // window.addEventListener('load', controlRecipe);
+  }
+
   #generateMarkupIngredient(ing) {
     return `
   <li class="recipe__ingredient">
