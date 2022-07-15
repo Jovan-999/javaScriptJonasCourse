@@ -8,9 +8,9 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import { async } from 'regenerator-runtime';
 
-if (module.hot) {
-  module.hot.accept();
-}
+// if (module.hot) {
+//   module.hot.accept();
+// }
 // This is coming from parcel
 
 const controlRecipes = async function () {
@@ -42,7 +42,9 @@ const controlSearchResults = async function () {
     await model.loadSearchResults(query);
 
     // 3) Render results
-    resultsView.render(model.state.search.results);
+    // resultsView.render(model.state.search.results); // RENDER ALL RESULTS
+    // console.log(model.getSearchResultsPage);
+    resultsView.render(model.getSearchResultsPage()); // we start at page 1
   } catch (err) {
     console.log(err);
   }
