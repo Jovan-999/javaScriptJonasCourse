@@ -10,7 +10,6 @@ class PaginationView extends View {
       if (!btn) return;
 
       const goToPage = +btn.dataset.goto;
-
       handler(goToPage);
     });
   }
@@ -20,7 +19,7 @@ class PaginationView extends View {
     const numPages = Math.ceil(
       this._data.results.length / this._data.resultsPerPage
     );
-    // console.log(numPages);
+
     // Page 1, and there are other pages
     if (curPage === 1 && numPages > 1) {
       return `
@@ -31,8 +30,10 @@ class PaginationView extends View {
           <svg class="search__icon">
             <use href="${icons}#icon-arrow-right"></use>
           </svg>
-        </button> `;
+        </button>
+      `;
     }
+
     // Last page
     if (curPage === numPages && numPages > 1) {
       return `
@@ -44,8 +45,9 @@ class PaginationView extends View {
           </svg>
           <span>Page ${curPage - 1}</span>
         </button>
-  `;
+      `;
     }
+
     // Other page
     if (curPage < numPages) {
       return `
@@ -64,9 +66,10 @@ class PaginationView extends View {
           <svg class="search__icon">
             <use href="${icons}#icon-arrow-right"></use>
           </svg>
-        </button> 
-  `;
+        </button>
+      `;
     }
+
     // Page 1, and there are NO other pages
     return '';
   }
